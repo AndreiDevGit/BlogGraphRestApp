@@ -1,1 +1,5 @@
-# RestAplication
+# RestApplication
+
+* Express
+* Nodemon
+* Body-Parser
