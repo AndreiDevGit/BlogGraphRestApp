@@ -1,4 +1,4 @@
-# RestApplication
+# BlogRest
 
 * Express
 * Nodemon
