@@ -136,7 +136,7 @@ exports.updatePost = (req, res, next) => {
         clearImage(post.imageUrl)
       }
       post.title = title
-      post.imageUrl = imageUrl
+      post.imageUrl = imageUrl.replace(/\\/g, '/') //fix windows path
       post.content = content
       return post.save()
     })
