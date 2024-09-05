@@ -63,6 +63,15 @@ mongoose
     'mongodb+srv://andreidev:andreidev@project0.ee9xrg1.mongodb.net/messages?retryWrites=true&w=majority&appName=Project0'
   )
   .then(result => {
-    app.listen(8080)
+    const server = app.listen(8080)
+    const io = require('./socket').init(server, {
+      cors: {
+        origin: 'http://localhost:3000',
+        credentials: true
+      }
+    })
+    io.on('connection', socket => {
+      //console.log('Client connected')
+    })
   })
   .catch(err => console.log(err))
