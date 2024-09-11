@@ -54,7 +54,7 @@ app.use((req, res, next) => {
   }
   next()
 })
-//app.use(auth) // here is bug with upload image
+app.use(auth)
 
 app.put('/post-image', (req, res, next) => {
   if (!req.isAuth) {
@@ -71,7 +71,6 @@ app.put('/post-image', (req, res, next) => {
     .json({ message: 'File stored.', filePath: req.file.path })
 })
 
-app.use(auth) // this need to be
 
 app.use(
   '/graphql',
