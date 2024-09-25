@@ -7,4 +7,8 @@ If you want switch to clear **"REST API + WebSocket"**, jump to commit:
 `git checkout f5b389a5bf89ba59804e71889640716d50e494e0`
 
 **!!!Do not forget switch front-end also!!!**
+
+if you want to active unit test, do not forget to install **Mocha**, **Chai** and **Sinon** packages:
+
+`npm install --save-dev mocha chai sinon`
 ____________________
